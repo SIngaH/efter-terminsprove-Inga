@@ -1,0 +1,28 @@
+#recent-blog{
+    display:block;
+    .recent-blog-insert{
+        margin:5% auto 10% auto; 
+        display:flex;
+        justify-content:space-between;
+        div{
+            margin:0 5%;
+            img{
+                width:100%;
+            }
+            h3, p{
+                color:var(--white);
+            }
+            .pink{
+                color:var(--pink);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 540px) {
+    #recent-blog .recent-blog-insert{
+        flex-direction: column;
+        div{
+            margin:5%;
+        }
+    }
+}

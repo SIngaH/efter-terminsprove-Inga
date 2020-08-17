@@ -1,0 +1,33 @@
+<%- include('../partials/head') %>
+    <link rel="stylesheet" href="assets/css/contact/contact.css">
+</head>
+    <body>
+        <div id="wrapper">
+            <%- include('../partials/hoved-navigation') %>
+            <section id="contact-us">
+                <h2>contact us</h2>
+                <img src="./assets/images/bottom_line2.png" alt="pink line" class="little-pink-line">
+                <div id="form-and-pink-box">
+                    <form method="post" action="http://localhost:4000/messages" target="_blank"  onsubmit="javascript:alert('Thank you for your input!')">
+                        <input type="text" name="name" placeholder="Your Name" required pattern=".{3,}">
+                        <input type="email" name="email" placeholder="Your Email" required pattern=".+\.[a-z]{2,}$">
+                        <input type="text" name="website" placeholder="Your Website" required pattern="www.+\.[a-z]{2,}">
+                        <textarea name="message" cols="30" rows="10" placeholder="Your Comment" required pattern=".{10,}"></textarea>
+                        <button>submit</button>
+                    </form>
+                    <section id="pink-contact-box">
+                        <i class="fas fa-map-marker-alt span2"></i>
+                        <p class="span2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias magnam exercitationem.</p>
+                        <i class="fas fa-mobile-alt row3"></i>
+                        <p class="row3">+21 4 3421 7654</p>
+                        <i class="fas fa-envelope"></i>
+                        <p>@Hsoft.com</p>
+                        <i class="fas fa-circle"></i>
+                        <p>www.Hsoft.com</p>
+                    </section>
+                </div>
+            </section>
+
+            <%- include('../partials/footer') %>
+        </div>
+<%- include('../partials/last') %>

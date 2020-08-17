@@ -1,0 +1,36 @@
+#latest-video{
+    margin:5% 0; 
+    video, .no-video-img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .video-buttons{
+        display:flex;
+        justify-content:center;
+        margin:1% 0;
+        img{
+            border:solid 2px var(--white);
+            padding:0.3%;
+            width:1.5%;
+            height:auto;
+        }
+        .prev{
+            transform: rotate(180deg);
+            margin-right:1%;
+        }
+    }
+}
+.hide{
+    display:none;
+}
+@media only screen and (max-width: 800px) {
+    #latest-video .video-buttons img{
+        width:5%;
+    }
+}
+@media only screen and (max-width: 540px) {
+    #latest-video video, #latest-video .no-video-img {
+        width: 90%;
+    }
+}

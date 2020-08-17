@@ -1,0 +1,36 @@
+#testimonials{
+    color:var(--white);
+    text-align:center;
+    width:50%;
+    display: block; 
+    margin:10% auto;
+    h4, p, ul{
+        margin:3% 0;
+    }
+    ul{
+        display:flex;
+        justify-content:center;
+        li{
+            color:var(--white);
+            list-style:none;
+            margin:0 2%;
+            a{
+                color:var(--white);
+                text-decoration: none;
+            }
+        }
+        .fab{
+            padding:6px;
+            border:solid var(--white) 2px;
+            font-size:15px;
+        }
+        .fa-facebook-f{
+            padding:6px 8.6px;
+        }
+    }
+}
+@media only screen and (max-width: 540px) {
+    #testimonials{
+        width:80%;
+    }
+}
