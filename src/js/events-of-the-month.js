@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
     }
     
-    /*
+    /*-------------old code
     box1.addEventListener("click", ()=>{
         imgs12.classList.remove("hide");
         imgs34.classList.add("hide");
