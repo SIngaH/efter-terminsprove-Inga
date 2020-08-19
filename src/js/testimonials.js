@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
             return response.json();
         })
         .then (function(result){
-            console.log(index)
             let index2 = index + 1;
             testimonials.innerHTML=`
                 <img src="./assets/images/content-img/testimonial_` + index2 + `.jpg" alt="` + result[index].name + `">                
@@ -53,7 +52,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     <li><a href="https://myaccount.google.com/"><i class="fab fa-google-plus-g"></i></a></li>
                 </ul>
             `;
-
         });
     }
 });

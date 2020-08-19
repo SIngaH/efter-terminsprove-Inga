@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
 /* billede gallleri delen */
 
     let eventBoxes = document.querySelectorAll("#events-of-the-month .progress-box");
-    console.log(eventBoxes)
     for (let index = 0; index < eventBoxes.length; index++) {
         eventBoxes[index].addEventListener("click", ()=>{
             boxColor(index);
