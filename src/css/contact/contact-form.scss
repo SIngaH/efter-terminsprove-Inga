@@ -17,19 +17,30 @@
             color:var(--grey);
             margin: 1% 0;
         }
-        button{
-            color:var(--white);
-            font-weight:bold;
-            border-top:3px solid var(--white);
-            border-bottom:3px solid var(--white);
-            border-left:0;
-            border-right:0;
-            text-transform: uppercase;
-            background-color:var(--black);
-            padding: 1.5% 0%;
-            width: 25%;
-            margin-left: auto;
-            margin-top:1%;
+        .btn-error-message{
+            display:flex;
+            justify-content:space-between;
+            button{
+                color:var(--white);
+                font-weight:bold;
+                border-top:3px solid var(--white);
+                border-bottom:3px solid var(--white);
+                border-left:0;
+                border-right:0;
+                text-transform: uppercase;
+                background-color:var(--black);
+                padding: 1.5% 0%;
+                width: 25%;
+                margin-left: auto;
+                margin-top:1%;
+            }
+            #contact-error-message{
+                display:none;
+                border:solid 2px red;
+                color:red;
+                padding: 1% 18%;
+                margin-top: 1%;
+            }
         }
     }
     #pink-contact-box{
@@ -51,6 +62,7 @@
         }
     }
 }
+
 @media only screen and (max-width: 864px) {
     #form-and-pink-box form{
         justify-content: start;

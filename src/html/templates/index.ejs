@@ -1,5 +1,6 @@
 <%- include('../partials/head') %>
     <link rel="stylesheet" href="assets/css/index/index.css">
+    <title>Terminsprøve</title>
 </head>
     <body>
     <div id="wrapper">
@@ -11,7 +12,7 @@
             </div>
             <img src="./assets/images/loader/madbars.gif" alt="loader" class="loader header-hide">
         </header>
-        
+
         <%- include('../partials/hoved-navigation') %>
 
         <section id="welcome-to-night-club">
@@ -133,7 +134,7 @@
             <img src="./assets/images/bottom_line2.png" alt="pink line" class="little-pink-line">
             <audio controls>
                 <source src="./assets/images/media/YouBelongWithMe.mp3" type="audio/mp3">
-            </audio> 
+            </audio>
         </section>
 
         <section id="latest-video">
@@ -142,7 +143,7 @@
             <div class="video">
                 <video width="60%" height="auto" controls>
                     <source src="./assets/images/media/space.mp4" type="video/mp4">
-                </video> 
+                </video>
             </div>
             <div class="no-video hide">
                 <img src="./assets/images/bg/no_video.jpg" alt="no video" class="no-video-img">
@@ -176,9 +177,12 @@
         <section id="newsletter">
             <h4>want the latest night club news</h4>
             <p>Subscribe to our newsletter and neer miss a <span class="pink">Event</span></p>
-            <form method="post" action="http://localhost:4000/newsletters" target="_blank"  onsubmit="javascript:alert('Thank you for subscribing to our newsletter!')">
-                <input type="email" name="email" placeholder="enter your email" required pattern=".+\.[a-z]{2,}$" id="newsletter-email">
+            <!-- <form method="post" action="http://localhost:4000/newsletters" target="_blank"  onsubmit="javascript:alert('Thank you for subscribing to our newsletter!')"> -->
+            <form method="post" id="form" novalidate>
+                <!-- <input type="email" name="email" placeholder="enter your email" required pattern=".+\.[a-z]{2,}$" id="newsletter-email"> -->
+                <input type="email" name="email" placeholder="enter your email" id="newsletter-email">
                 <button id="button">subscribe</button>
+                <p id="error-message"></p>
             </form>
         </section>
 
@@ -191,5 +195,7 @@
     <script src="./assets/js/testimonials.js"></script>
     <script src="./assets/js/resent-blog.js"></script>
     <script src="./assets/js/video-gallery.js"></script>
+    <script src="./assets/js/newsletter-post.js"></script>
+
 
 <%- include('../partials/last') %>
