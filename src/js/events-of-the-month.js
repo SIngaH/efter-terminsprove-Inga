@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     for (let index = 0; index < eventBoxes.length; index++) {
         eventBoxes[index].addEventListener("click", ()=>{
             boxColor(index);
+            clearInterval(galleryMove)
         });
     }
     let box1 = document.querySelector("#events-of-the-month .box1"); 
@@ -64,6 +65,21 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let box3 = document.querySelector(".box3");
     let imgs56 =  document.querySelector("#events-of-the-month .events-img5-6"); 
 
+/* ------makes the gallery move until box is clicked------ */
+    let MoveIndex = 0;
+    let galleryMove = setInterval(galleryMoves, 3000);
+
+    function galleryMoves(){
+        if(MoveIndex == 0){
+            MoveIndex = 1
+        }else if(MoveIndex == 1){
+            MoveIndex = 2
+        }else{
+            MoveIndex = 0
+        }
+        boxColor(MoveIndex);
+    }
+    
     function boxColor(index){
         if(index == 0){
             imgs12.classList.remove("hide");
