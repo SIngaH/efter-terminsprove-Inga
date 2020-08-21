@@ -75,7 +75,7 @@ form.addEventListener("submit", (e) =>{
         email.style.border = borderGone;
     }
 /*--------------------------Number of guests--------------------------------- */
-    if(numberOfGuests.value === "" || numberOfGuests.value == null){
+    if(numberOfGuests.value === "" || numberOfGuests.value == null || numberOfGuests == 0){
         errorElement.style.display="block";
         errorElement.innerHTML = "The number of guests is required";
         numberOfGuests.focus();
@@ -84,16 +84,47 @@ form.addEventListener("submit", (e) =>{
     }else{
         numberOfGuests.style.border = borderGone;
     }
-    if(isNaN(numberOfGuests.value) || numberOfGuests.value < 1 || numberOfGuests.value > 8){
+    if(isNaN(numberOfGuests.value)){
         errorElement.style.display="block";
-        errorElement.innerHTML = "The biggest table has 8 seats";
+        errorElement.innerHTML = "The amount of guests should be written in numbers";
         numberOfGuests.focus();
         numberOfGuests.style.border = border;
         return false;
     }else{
         numberOfGuests.style.border = borderGone;
     }
+    /* checking if all the guests can fit around the table */
+    let tableSize1 = ["1", "2", "4", "6", "7", "9", "11", "12", "14"];
+    let tableSize2 = ["3", "8", "13"];
+    let tableSize3 = ["5", "10", "15"];
 
+    if(tableSize1.includes(tableNumber.value) && numberOfGuests.value > 4){
+        errorElement.style.display="block";
+        errorElement.innerHTML = "This table has 4 seats";
+        numberOfGuests.focus();
+        numberOfGuests.style.border = border;
+        return false;
+    }else{
+        numberOfGuests.style.border = borderGone;
+    }
+    if(tableSize2.includes(tableNumber.value) && numberOfGuests.value > 6){
+        errorElement.style.display="block";
+        errorElement.innerHTML = "This table has 6 seats";
+        numberOfGuests.focus();
+        numberOfGuests.style.border = border;
+        return false;
+    }else{
+        numberOfGuests.style.border = borderGone;
+    }
+    if(tableSize3.includes(tableNumber.value) && numberOfGuests.value > 8){
+        errorElement.style.display="block";
+        errorElement.innerHTML = "This table has 8 seats";
+        numberOfGuests.focus();
+        numberOfGuests.style.border = border;
+        return false;
+    }else{
+        numberOfGuests.style.border = borderGone;
+    }
 
 /*--------------------------Phone number--------------------------------- */
     if(phoneNumber.value === "" || phoneNumber.value == null){
