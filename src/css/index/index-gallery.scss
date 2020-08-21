@@ -40,3 +40,12 @@
         width:100%;
     }
 } 
+
+/* only works in chrome and IE*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @supports (not (-ms-accelerator:true))
+        and (not (-moz-appearance:none)) {
+        .billede-gallery, .billede-gallery2 {
+            height: 161px;
+        }
+    } }
