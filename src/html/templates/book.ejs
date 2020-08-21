@@ -1,0 +1,91 @@
+<%- include('../partials/head') %>
+    <link rel="stylesheet" href="assets/css/book/book.css">
+</head>
+    <body>
+        <div id="wrapper">
+            <%- include('../partials/hoved-navigation') %>
+       
+            <section id="tables">
+                <div class="table table1">
+                    <img src="./assets/images/table/table_1.png" alt="">
+                    <p>1</p>
+                </div>
+                <div class="table table2">
+                    <img src="./assets/images/table/table_1.png" alt="">
+                    <p>2</p>
+                </div>
+                <div class="table table3">
+                    <img src="./assets/images/table/table_2.png" alt="">
+                    <p>3</p>
+                </div>
+                <div class="table table4">
+                    <img src="./assets/images/table/table_1.png" alt="">
+                    <p>4</p>
+                </div>
+                <div class="table table5">
+                    <img src="./assets/images/table/table_3.png" alt="">
+                    <p>5</p>
+                </div>
+
+                <div class="table table6">
+                    <img src="./assets/images/table/table_1.png" alt="">
+                    <p>6</p>
+                </div>
+                <div class="table table7">
+                    <img src="./assets/images/table/table_1.png" alt="">
+                    <p>7</p>
+                </div>
+                <div class="table table8">
+                    <img src="./assets/images/table/table_2.png" alt="">
+                    <p>8</p>
+                </div>
+                <div class="table table9">
+                    <img src="./assets/images/table/table_1.png" alt="">
+                    <p>9</p>
+                </div>
+                <div class="table table10">
+                    <img src="./assets/images/table/table_3.png" alt="">
+                    <p>10</p>
+                </div>
+
+
+                <div class="table table11">
+                    <img src="./assets/images/table/table_1.png" alt="">
+                    <p>11</p>
+                </div>
+                <div class="table table12">
+                    <img src="./assets/images/table/table_1.png" alt="">
+                    <p>12</p>
+                </div>
+                <div class="table table13">
+                    <img src="./assets/images/table/table_2.png" alt="">
+                    <p>13</p>
+                </div>
+                <div class="table table14">
+                    <img src="./assets/images/table/table_1.png" alt="">
+                    <p>14</p>
+                </div>
+                <div class="table table15">
+                    <img src="./assets/images/table/table_3.png" alt="">
+                    <p>15</p>
+                </div>                
+            </section>
+
+            <section id="book-form">
+                <form method="GET" class="form" novalidate>
+                    <input name="name" class="form_input form__name" placeholder="Your Name">
+                    <input type="text" name="number" class="form_input form__table-number" placeholder="Table Number">
+                    <input type="date" name="date" class="form_input form__date" placeholder="Select Date">
+                    <input type="email" name="email" class="form_input form__email" placeholder="Email">
+                    <input type="text" name="number" class="form_input form__number-of-guests" placeholder="Number Of Guests">
+                    <input type="text" name="phoneNumber" class="form_input form__phone_number" placeholder="Phone number">
+                    <textarea name="comment" cols="30" rows="10" class="form_input form__comment"></textarea>
+                    <button>RESERVE</button>
+                    <p class="error-message"></p>
+                </form>            
+            </section>
+
+            <%- include('../partials/footer') %>
+        </div>
+        <script src="./assets/js/book-table.js"></script>
+<%- include('../partials/last') %>

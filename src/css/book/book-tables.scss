@@ -1,0 +1,21 @@
+#tables{
+    display:grid;
+    grid-template-rows:repeat(3, 1fr);
+    grid-template-columns:repeat(5, 1fr);
+    margin: 7% 4%;
+    gap:3%;
+    .table{
+        display:grid;
+        img, p{
+            place-self:center;
+            grid-row:1;
+            grid-column:1;
+        }
+        p{
+            z-index: 2;
+        }
+        img{
+            z-index: 1;
+        }
+    }
+}
