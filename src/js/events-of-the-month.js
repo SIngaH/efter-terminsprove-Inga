@@ -104,32 +104,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
             box3.setAttribute("id", "pink");
         }
     }
-    
-    /*-------------old code
-    box1.addEventListener("click", ()=>{
-        imgs12.classList.remove("hide");
-        imgs34.classList.add("hide");
-        imgs56.classList.add("hide");
-        box1.classList.add("pink");
-        box2.classList.remove("pink");
-        box3.classList.remove("pink");
-    });
-
-    box2.addEventListener("click", ()=>{
-        imgs12.classList.add("hide");
-        imgs34.classList.remove("hide");
-        imgs56.classList.add("hide");
-        box1.classList.remove("pink");
-        box2.classList.add("pink");
-        box3.classList.remove("pink");
-    });
-
-    box3.addEventListener("click", ()=>{
-        imgs12.classList.add("hide");
-        imgs34.classList.add("hide");
-        imgs56.classList.remove("hide");
-        box1.classList.remove("pink");
-        box2.classList.remove("pink");
-        box3.classList.add("pink");
-    }); */
 });
